@@ -18,6 +18,6 @@ function setCoutndown() {
    var minutes = Math.floor(time / 60);
    const seconds = time % 60;
 
-   countdownEl.innerHTML = '${minutes}: ${seconds}';
+   countdownEl.innerHTML = `${minutes}: ${seconds}`;
    time--;
 }
