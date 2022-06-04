@@ -15,13 +15,21 @@ let index = question4.indexOf("quotes", 4);
 var question5= ["numbers and strings","other arrays","booleans","all of the above"];
 let index = question5.indexOf("booleans", 5);
 
+btnQ1.addEventListener("click", answerQuestions);
+btnQ2.addEventListener("click", answerQuestions);
+btnQ3.addEventListener("click", answerQuestions);
+btnQ4.addEventListener("click", answerQuestions);
+btnQ5.addEventListener("click", answerQuestions);
+
+function answerQuestions() {
+   var 
+}
+
 function startQuiz() {
 console.log("it worked");
 setInterval(setCoutndown, 1000);
 }
 startBtn.addEventListener("click", startQuiz);
-
-
 
 //timer section
 
