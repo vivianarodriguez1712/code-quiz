@@ -2,6 +2,7 @@ var startBtn = document.getElementById("start-Btn");
 
 function startQuiz() {
 console.log("it worked");
+setInterval(setCoutndown, 1000);
 }
 startBtn.addEventListener("click", startQuiz);
 
@@ -12,8 +13,6 @@ let time = startingMinutes * 60;
 
 const countdownEl = document.getElementById("countdown");
 
-setInterval(setCoutndown, 1000);
-
 function setCoutndown() {
    var minutes = Math.floor(time / 60);
    const seconds = time % 60;
@@ -21,3 +20,4 @@ function setCoutndown() {
    countdownEl.innerHTML = `${minutes}: ${seconds}`;
    time--;
 }
+
