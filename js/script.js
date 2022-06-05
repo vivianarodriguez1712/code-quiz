@@ -1,28 +1,83 @@
 var startBtn = document.getElementById("start-Btn");
 
+var btnQ1A1= document.querySelector("#strings")
+var btnQ1A2= document.querySelector("#booleans1")
+var btnQ1A3= document.querySelector("#alerts")
+var btnQ1A4= document.querySelector("#numbers")
+
+var btnQ2A1= document.querySelector("#commas")
+var btnQ2A2= document.querySelector("#curly-brackets1")
+var btnQ2A3= document.querySelector("#quotes1")
+var btnQ2A4= document.querySelector("#parenthesis")
+
+var btnQ3A1= document.querySelector("#JavaScript")
+var btnQ3A2= document.querySelector("#terminal-bash")
+var btnQ3A3= document.querySelector("#for-loops")
+var btnQ3A4= document.querySelector("#console-log")
+
+var btnQ4A1= document.querySelector("#quotes")
+var btnQ4A2= document.querySelector("#curly-brackets")
+var btnQ4A3= document.querySelector("#parenthesis")
+var btnQ4A4= document.querySelector("#square-brackets")
+
+var btnQ5A1= document.querySelector("#numbers-and-strings")
+var btnQ5A2= document.querySelector("#other-arrays")
+var btnQ5A3= document.querySelector("#booleans")
+var btnQ5A4= document.querySelector("#all-of-the-above")
+
+btnQ1A1.addEventListener("click", answerQuestions);
+btnQ1A2.addEventListener("click", answerQuestions);
+btnQ1A3.addEventListener("click", answerQuestions);
+btnQ1A4.addEventListener("click", answerQuestions);
+
+btnQ2A1.addEventListener("click", answerQuestions);
+btnQ2A2.addEventListener("click", answerQuestions);
+btnQ2A3.addEventListener("click", answerQuestions);
+btnQ2A4.addEventListener("click", answerQuestions);
+
+btnQ3A1.addEventListener("click", answerQuestions);
+btnQ3A2.addEventListener("click", answerQuestions);
+btnQ3A3.addEventListener("click", answerQuestions);
+btnQ3A4.addEventListener("click", answerQuestions);
+
+btnQ4A1.addEventListener("click", answerQuestions);
+btnQ4A2.addEventListener("click", answerQuestions);
+btnQ4A3.addEventListener("click", answerQuestions);
+btnQ4A4.addEventListener("click", answerQuestions);
+
+btnQ5A1.addEventListener("click", answerQuestions);
+btnQ5A2.addEventListener("click", answerQuestions);
+btnQ5A3.addEventListener("click", answerQuestions);
+btnQ5A4.addEventListener("click", answerQuestions);
+
 var question1 = ["strings","booleans","alerts","numbers"];
-let index = question1.indexOf("booleans", 1);
+var index1 = question1.indexOf("booleans");
 
 var question2= ["commas","curly brackets","quotes","parenthesis"];
-let index = question2.indexOf("curly brackets", 2);
+var index2 = question2.indexOf("curly brackets");
 
 var question3= ["JavaScript","terminal/bash","for loops","console.log"];
-let index = question3.indexOf("for loops", 3);
+var index3 = question3.indexOf("for loops");
 
 var question4= ["quotes","curly brackets","parenthesis","square brackets"];
-let index = question4.indexOf("quotes", 4);
+var index4 = question4.indexOf("quotes");
 
 var question5= ["numbers and strings","other arrays","booleans","all of the above"];
-let index = question5.indexOf("booleans", 5);
+var index5 = question5.indexOf("booleans")
 
-btnQ1.addEventListener("click", answerQuestions);
-btnQ2.addEventListener("click", answerQuestions);
-btnQ3.addEventListener("click", answerQuestions);
-btnQ4.addEventListener("click", answerQuestions);
-btnQ5.addEventListener("click", answerQuestions);
+function answerQuestions(event) {
+   var btn= event.target;
+   var answered= btn.innerHTML;
+   var questionID= btn.closest("div").id;
+   console.log(answered);
+   console.log(questionID);
 
-function answerQuestions() {
-   var 
+
+   if (answered === index1 || answered === index2 || answered === index3 || answered === index4){
+       console.log(correct)
+   }
+
+  else if 
 }
 
 function startQuiz() {
