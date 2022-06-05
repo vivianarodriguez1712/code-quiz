@@ -4,6 +4,7 @@ var questionDiv = document.getElementById("questionDiv");
 var choices = document.getElementById("choices");
 var indexQ= 0;
 var ulCreate = document.createElement("ul");
+var score= 0;
 
 // var btnQ1A1= document.querySelector("#strings")
 // var btnQ1A2= document.querySelector("#booleans1")
@@ -66,7 +67,7 @@ var questions= [
         title: "String values must be enclosed within _____ when being assigned to variables.", 
         choices: ["commas","curly brackets","quotes","parenthesis"],
         answer: "curly brackets",
-    }
+    },
 
     {
         title: "A very useful tool used during development and debugging for printing content to the debugger is:", 
@@ -117,7 +118,6 @@ function showQuestions(indexQ) {
        questionDiv.appendChild(ulCreate);
        ulCreate.appendChild(listItem);
        listItem.addEventListener("click", (answerQuestions))
-       answerQuestions.
    })
 }
 
@@ -128,37 +128,55 @@ function answerQuestions(event) {
    console.log(answered);
    console.log(questionID);
 
-   if (questionID === "Q1") {
-    if (answered === index1) {
-        console.log("Correct!");
-    } else {
-        time = time - 10;
-    }
-} else if (questionID === "Q2") {
-    if (answered === index2) {
-        console.log("Correct!");
-    } else {
-        time = time - 10;
-    }
-} else if (questionID === "Q3") {
-    if (answered === index3) {
-        console.log("Correct!");
-    } else {
-        time = time - 10;
-    }
-} else if (questionID === "Q4") {
-    if (answered === index4) {
-        console.log("Correct!");
-    } else {
-        time = time - 10;
-    }
-} else if (questionID === "Q5") {
-    if (answered === index5) {
-        console.log("Correct!");
-    } else {
-        time = time - 10;
-    }
+   if (btn.textContent == questions[indexQ].answer) {
+       score+5
+       alert("Correct!");
+   } else {
+       alert("Incorrect!");
    }
+   
+indexQ++; 
+showQuestions(indexQ);
+
+//    if (questionID === "Q1") {
+//     if (answered === index1) {
+//         console.log("Correct!");
+//     } else {
+//         time = time - 10;
+//     }
+// } else if (questionID === "Q2") {
+//     if (answered === index2) {
+//         console.log("Correct!");
+//     } else {
+//         time = time - 10;
+//     }
+// } else if (questionID === "Q3") {
+//     if (answered === index3) {
+//         console.log("Correct!");
+//     } else {
+//         time = time - 10;
+//     }
+// } else if (questionID === "Q4") {
+//     if (answered === index4) {
+//         console.log("Correct!");
+//     } else {
+//         time = time - 10;
+//     }
+// } else if (questionID === "Q5") {
+//     if (answered === index5) {
+//         console.log("Correct!");
+//     } else {
+//         time = time - 10;
+//     }
+//    }
+}
+
+function endQuiz() {
+ questionDiv.innerHTML="";
+ //create an h1 called "quiz completed"
+ //create a p "final score" and concat variable 
+ //create a label "enter initials" & create an input box & a submit btn 
+ //in index.html
 }
 
 function startQuiz() {
