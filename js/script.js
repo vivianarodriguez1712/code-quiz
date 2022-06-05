@@ -75,33 +75,33 @@ function answerQuestions(event) {
 
    if (questionID === "Q1") {
     if (answered === index1) {
-        alert("Correct!");
+        console.log("Correct!");
     } else {
-        alert("Incorrect!");
+        time = time - 10;
     }
 } else if (questionID === "Q2") {
     if (answered === index2) {
-        alert("Correct!");
+        console.log("Correct!");
     } else {
-        alert("Incorrect!");
+        time = time - 10;
     }
 } else if (questionID === "Q3") {
     if (answered === index3) {
-        alert("Correct!");
+        console.log("Correct!");
     } else {
-        alert("Incorrect!");
+        time = time - 10;
     }
 } else if (questionID === "Q4") {
     if (answered === index4) {
-        alert("Correct!");
+        console.log("Correct!");
     } else {
-        alert("Incorrect!");
+        time = time - 10;
     }
 } else if (questionID === "Q5") {
     if (answered === index5) {
-        alert("Correct!");
+        console.log("Correct!");
     } else {
-        alert("Incorrect!");
+        time = time - 10;
     }
    }
 }
