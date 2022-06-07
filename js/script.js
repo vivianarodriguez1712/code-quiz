@@ -5,6 +5,7 @@ var choices = document.getElementById("choices");
 var indexQ= 0;
 var ulCreate = document.createElement("ul");
 var score= 0;
+var clearScore= document.getElementById("clearScore");
 
 // var btnQ1A1= document.querySelector("#strings")
 // var btnQ1A2= document.querySelector("#booleans1")
@@ -202,3 +203,17 @@ function setCoutndown() {
    showQuestions(indexQ);
 }
 // end timer section
+highscoreBtn.addEventListener("click", function () {
+    if (highscoresEl.style.display === "none") {
+        highscoresEl.style.display = "block";
+    } else if (highscoresEl.style.display === "block") {
+        highscoresEl.style.display = "none";
+    } else {
+        return alert("No scores to show.");
+    }
+});
+
+function clearScore() {
+    localStorage.clear();
+    scoreListEl.innerHTML="";
+}
